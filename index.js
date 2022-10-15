@@ -1,4 +1,3 @@
-
 const array = ['rock', 'paper', 'scissor'];
 
 const computerPlay = function(){
@@ -7,16 +6,16 @@ const computerPlay = function(){
 };
 
 const playRound = function(playerSelection, computerSelection){
-  if(computerSelection === computerSelection){
+  if(playerSelection === computerSelection){
     return `No winner, let's try again`;
   }
-  if(computerSelection === "paper" && computerSelection === "rock"){
+  if(playerSelection === "paper" && computerSelection === "rock"){
     return `You win! Paper beats rock`;
   }
-  if(computerSelection === "scissor" && computerSelection === "paper"){
+  if(playerSelection === "scissor" && computerSelection === "paper"){
     return `You win! Sciossor beats paper`;
   }
-  if(computerSelection === "rock" && computerSelection === "scissor"){
+  if(playerSelection === "rock" && computerSelection === "scissor"){
     return `You win! Rock beats scissor`;
   }
   else return `You lost! ${computerSelection} beats ${playerSelection}`;
@@ -24,17 +23,11 @@ const playRound = function(playerSelection, computerSelection){
 };
 
 const round = function(){
-  const rounds = prompt("How many times do you wanana play?", "");
-  
-  for(let i = 0; i < rounds; i++){
+  for(let i = 0; i < 5; i++){
     const computerSelection = computerPlay();
-
-    do{
-      
-      const playerSelection = (prompt(`Round ${i + 1}\nChoose:\n\t Rock;\n\t Paper;\n\t Scissor`)).toLocaleLowerCase();
-    }while(playerSelection === array);
+    const playerSelection = (prompt(`Round ${i + 1}\nChoose:\n\t Rock;\n\t Paper;\n\t Scissor`)).toLocaleLowerCase();
   
-    if (!selections.some((ele) => ele === playerSelection)) {
+    if(selections.includes(playerSelection)){
       i--;
       continue;
     }
