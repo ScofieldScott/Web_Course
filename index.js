@@ -27,7 +27,7 @@ const round = function(){
     const computerSelection = computerPlay();
     const playerSelection = (prompt(`Round ${i + 1}\nChoose:\n\t Rock;\n\t Paper;\n\t Scissor`)).toLocaleLowerCase();
   
-    if(selections.includes(playerSelection)){
+    if(selections.array(playerSelection)){
       i--;
       continue;
     }

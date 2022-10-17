@@ -57,9 +57,6 @@ ul{
     background-color: none;
     margin-right: auto;
 }
-.nav-link{
-    color: white;
-}
 /* fim da config da nav */
 
 /* titulo */
@@ -162,7 +159,7 @@ img{
         display: flex;
         height: 100px;
         background-color: rgba(0, 0, 0, 0.233);;
-        box-shadow: 2px -3px 7px black;
+        box-shadow: 2px -3px 7px white;
     }
     .card1{
         padding-left: 10px;
